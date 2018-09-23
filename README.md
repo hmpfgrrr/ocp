@@ -1,2 +1,2 @@
-# ocp
-oracle oca and ocp certification playground
+# OCP Playground
+Playground for Java OCA and OCP certification
