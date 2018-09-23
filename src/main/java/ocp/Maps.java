@@ -21,6 +21,8 @@ public class Maps {
         favorites.put("Jenny2", "Tram");
         favorites.putIfAbsent("Jenny2", "Tram2");
         favorites.putIfAbsent("Jenny3", "Tram2");
+        favorites.put("Jenny4", null);
+        favorites.putIfAbsent("Jenny4", "Tram2");
 
         System.out.println(favorites);
 
