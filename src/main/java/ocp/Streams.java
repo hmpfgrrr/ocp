@@ -1,7 +1,11 @@
 package main.java.ocp;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -27,6 +31,27 @@ public class Streams {
         Stream<String> stream = cats.stream();
         cats.add("KC");
         System.out.println(stream.count());
+
+
+        //1234
+        IntStream.range(1, 5)
+                .mapToObj(i -> i)
+                .forEach(System.out::print);
+
+        System.out.println();
+        //12345
+        IntStream.rangeClosed(1, 5)
+                .mapToObj(i -> i)
+                .forEach(System.out::print);
+
+        System.out.println();
+        IntStream.iterate(1, i -> (i+1))
+                .limit(5).forEach((i1) -> System.out.print(i1 + " "));
+
+        System.out.println();
+        Stream<LocalDate> s = Stream.of(LocalDate.now());
+        UnaryOperator<LocalDate> u = localDate -> localDate;
+        System.out.println(s.filter(l -> l != null).map(u));
 
     }
 
