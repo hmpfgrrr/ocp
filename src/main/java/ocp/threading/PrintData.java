@@ -6,6 +6,7 @@ package main.java.ocp.threading;
 public class PrintData {
 
     public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName() + " printing main thread");
         new Thread(new PrintDataInternal()).start();
         (new ReadInventoryThread()).start();
     }
@@ -16,7 +17,7 @@ class PrintDataInternal implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 3; i++) {
-            System.out.println(Thread.currentThread().getName() + " Printing rec: " + i);
+            System.out.println(Thread.currentThread().getName() + " printing rec: " + i);
         }
     }
 }

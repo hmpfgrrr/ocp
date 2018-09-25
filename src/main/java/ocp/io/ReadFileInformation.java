@@ -9,7 +9,7 @@ public class ReadFileInformation {
 
     public static void main(String[] args) {
         //File file = new File("./src/main/java/ocp/io/ReadFileInformation.java");
-        File file = new File("./src/main/java/ocp/io");
+        File file = new File("src/main/java/ocp/io");
         System.out.println("File exists: " + file.exists());
         if (file.exists()){
             System.out.println(file.getAbsolutePath());

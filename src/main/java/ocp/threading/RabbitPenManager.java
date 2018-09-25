@@ -4,7 +4,6 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.stream.IntStream;
 
 /**
  * Created by christianneuls on 24.09.18.
@@ -20,6 +19,7 @@ public class RabbitPenManager {
 
         //also waiting forever with only a single thread
         //ExecutorService service = Executors.newSingleThreadExecutor();
+
         ExecutorService service = Executors.newFixedThreadPool(2);
         service.submit(() -> await(cb));
         service.submit(() -> await(cb));

@@ -13,12 +13,13 @@ public class SheepManager {
     }
 
     public static void main(String[] args) {
+        System.out.println("incrementing unguarded in parallel can yield race conditions");
         ExecutorService service = null;
         try {
             service = Executors.newFixedThreadPool(20);
 
             SheepManager manager = new SheepManager();
-            for (int i = 0; i < 500; i++) {
+            for (int i = 0; i < 5000; i++) {
                 service.submit(() -> manager.incrementAndReport());
             }
         } finally {

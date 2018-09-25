@@ -1,7 +1,6 @@
 package main.java.ocp.threading.forkjoin;
 
 import java.util.Arrays;
-import java.util.DoubleSummaryStatistics;
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;

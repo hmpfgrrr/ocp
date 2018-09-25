@@ -30,7 +30,7 @@ public class Streams {
         cats.add("Ripley");
         Stream<String> stream = cats.stream();
         cats.add("KC");
-        System.out.println(stream.count());
+        System.out.println(stream.count());  //3
 
 
         //1234
@@ -44,10 +44,12 @@ public class Streams {
                 .mapToObj(i -> i)
                 .forEach(System.out::print);
 
+        //12345 - create via own function with iterate
         System.out.println();
         IntStream.iterate(1, i -> (i+1))
                 .limit(5).forEach((i1) -> System.out.print(i1 + " "));
 
+        //map without collect -> outputs something like "java.util.stream.ReferencePipeline$3@7291c18f"
         System.out.println();
         Stream<LocalDate> s = Stream.of(LocalDate.now());
         UnaryOperator<LocalDate> u = localDate -> localDate;

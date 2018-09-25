@@ -27,7 +27,6 @@ public class Generics {
         birds2.add(new Sparrow());
         birds2.add(new Bird());
 
-
         //lower bounds
         List<String> strings = new ArrayList<String>();
         strings.add("tweet");

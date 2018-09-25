@@ -73,9 +73,11 @@ public class Collections {
             .map(s -> s.toUpperCase())
             .forEach(System.out::println);
 
+        //example for parallel output
         System.out.println();
         Arrays.asList("jackal", "kangaroo", "lemur")
                 .parallelStream()
+                //.stream()
                 .map(s -> {
                     System.out.println(s);
                     return s.toUpperCase();

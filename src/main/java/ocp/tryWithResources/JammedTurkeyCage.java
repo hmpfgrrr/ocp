@@ -7,6 +7,7 @@ public class JammedTurkeyCage implements AutoCloseable {
 
     @Override
     public void close() throws IllegalStateException {
+        System.out.println("closing");
         throw new IllegalStateException("Cage door does not close");
     }
 

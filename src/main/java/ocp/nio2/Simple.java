@@ -14,7 +14,7 @@ import java.nio.file.attribute.FileTime;
 public class Simple {
 
     public static void main(String[] args) {
-        Path path = Paths.get("/src/main/java/ocp/io/CopyFile.java");
+        Path path = Paths.get("src/main/java/ocp/io/CopyFile.java");
         System.out.println("path is :" + path);
         System.out.println(path.getRoot());
         System.out.println(path.getFileName());
